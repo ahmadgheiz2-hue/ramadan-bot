@@ -1,10 +1,28 @@
-// جاهز للعمل مع Telegram Web App
-window.Telegram.WebApp.ready();
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(to bottom, #fceabb, #f8b500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-function refreshData() {
-  const points = window.Telegram.WebApp.initDataUnsafe.points || 0;
-  const referrals = window.Telegram.WebApp.initDataUnsafe.referrals || 0;
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
-  document.getElementById("user-points").innerText = `النقاط: ${points}`;
-  document.getElementById("user-referrals").innerText = `عدد الإحالات: ${referrals}`;
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff9800;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
